@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/pc.css">
+    <link rel="stylesheet" href="css/sp.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>ポートフォリオサイト</title>
+</head>
+<body>
+    <header id="header">
+        <h1 class="title">portfolio</h1>
+        <nav id="navi"> 
+        <h1 class="title2">portfolio</h1>
+            <ul class="menu">
+                <li><a href="">Webサイト</a></li>
+                <li><a href="">バナー</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header> 
+    <main>
+        <div class="mainvisual">
+              <ul class="fade" id="slider">
+                <li><img src="img/main.png" alt=""></li>
+                <li><img src="img/main2.png" alt=""></li>
+                <li><img src="img/main3.png" alt=""></li>
+              </ul>
+        </div>
+        <div class="sp_mainvisual">
+            <img src="img/main.png" alt="">
+        </div>
+        <div class="wrapper">
+            <section id="web">
+                <h2 class="section-title">Webサイト</h2>
+                <ul class="section-items">
+                    <li class="fadein"><a href="">
+                        <img class="kari" src="img/kari.png" alt="">
+                        <h3 class="content-title">テキストテキスト</h3>
+                    </a></li>
+                    <li class="fadein"><a href="">
+                        <img class="kari" src="img/kari.png" alt="">
+                        <h3 class="content-title">テキストテキスト</h3>
+                    </a></li>
+                    <li class="fadein"><a href="">
+                        <img class="kari" src="img/kari.png" alt="">
+                        <h3 class="content-title">テキストテキスト</h3>
+                    </a></li>
+                </ul>
+                <!-- ↓スマホ用ul -->
+                <ul class="sp_section-items sp_slider">
+                    <li><img src="img/kari.png" alt=""><a href=""></a></img></li>
+                    <li><img src="img/kari.png" alt=""><a href=""></a></img></li>
+                    <li><img src="img/kari.png" alt=""><a href=""></a></img></li>
+                    <li><img src="img/kari.png" alt=""><a href=""></a></img></li>
+                    <li><img src="img/kari.png" alt=""><a href=""></a></img></li>
+                </ul>
+                <button class="more">more</button>
+                
+            </section>
+
+            <section id="banner">
+                <h2 class="section-title">バナー</h2>
+                <ul class="section-items">
+                    <li class="fadein"><a href="">
+                        <img class="kari" src="img/banner1.png" alt="">
+                        <h3 class="content-title">プログラミングスクールの<br>生徒募集</h3>
+                    </a></li>
+                    <li class="fadein"><a href="">
+                        <img class="kari" src="img/banner2.jpg" alt="">
+                        <h3 class="content-title">土地活用オンライン<br>個別相談会</h3>
+                    </a></li>
+                    <li class="fadein"><a href="">
+                        <img class="kari" src="img/banner3.jpg" alt="">
+                        <h3 class="content-title">木質リノベーション</h3>
+                    </a></li>
+                </ul>
+                <!-- ↓スマホ用ul -->
+                <ul class="sp_section-items sp_slider">
+                    <li><img src="img/kari.png" alt=""><a href=""></a></img></li>
+                    <li><img src="img/kari.png" alt=""><a href=""></a></img></li>
+                    <li><img src="img/kari.png" alt=""><a href=""></a></img></li>
+                    <li><img src="img/kari.png" alt=""><a href=""></a></img></li>
+                    <li><img src="img/kari.png" alt=""><a href=""></a></img></li>
+                </ul>
+                <button class="more">more</button>
+            </section>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <!-- 各バージョンの意味
+            X: メジャーバージョン 見た目や操作性に影響を及ぼすような大きな変更やページの追加など
+            Y: マイナーバージョン 細かな機能向上や部分的な情報の追加やページの修正など
+            Z: パッチバージョン バグ修正や誤字脱字の訂正など -->
+            <!-- <p>var.0.0.0</p> -->
+            <p>2023 portfolio</p>
+    </footer>
+</body>
+</html>

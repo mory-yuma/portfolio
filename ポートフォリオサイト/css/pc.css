@@ -1,6 +1,5 @@
 img {
     max-width: 100%;
-    width: 100%;
 }
 li {
     list-style: none;
@@ -8,66 +7,50 @@ li {
 a {
     text-decoration: none;
 }
-main {
-    /* background-color: #EEEEEE; */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
 }
-.sp_mainvisual {
-  display: none;
-}
-.sp_section-items {
-  display: none;
+.open body {
+  overflow: hidden;
 }
 /* ヘッダーここから */
 #header {
     height: 100px;
-    padding: 40px 0 0 50px;
-    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
     background-color: #fff;
-    z-index: 20;
+    z-index: 999;
+    padding: 0 20px 0 40px;
 }
-.title {
+#header .header-title {
     font-size: 30px;
     font-weight: bold;
 }
-.title2 {
-    font-size: 30px;
-    font-weight: bold;
-    position: fixed;
-    z-index: 20;
-    top: 40px;
-    left: 50px;
-    opacity: 0;
-    color: #000;
-}
-.open .title2 {
+.open .header-title {
     opacity: 1;
 }
-.hamburger {
+#header .hamburger {
     width: 100px;
     height: 100px;
-    background-color: #FFFF00;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 30;
+    position: relative;
     cursor: pointer;
     transition: 0.3s;
-    border-radius: 6px;
+    z-index: 20;
 }
-.hamburger:hover {
+#header .hamburger:hover {
     opacity: 0.7;
 }
-.hamburger span {
+#header .hamburger span {
   width: 50px;
   height: 2px ;
-  background: #000;
+  background-color: #000;
   position: absolute;
   left: 25px;
   transition: 0.3s ease-in-out;
-  /* transition: 0.3s ease-in-out;これは何？ */
 }
 .hamburger span:nth-child(1) {
   top: 36px;
@@ -78,65 +61,71 @@ main {
 .hamburger span:nth-child(3) {
   top: 64px;
 }
-.open .hamburger {
-  background-color: #FFFF99;
-}
 .open .hamburger span:nth-child(1) {
     top: 47px;
     left: 25px;
-    background :#000;
+    background-color: #fff;
     transform: rotate(-45deg);
   }
   .open .hamburger span:nth-child(2),
   .open .hamburger span:nth-child(3) {
     top: 47px;
-    background: #000;
+    background-color: #fff;
     transform: rotate(45deg);
   } 
- #navi {
-    width: 100%;
-    height: 100vh;
-    background-color: #FFFF99;
-    color: #fff;
+  #header-navi {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -300px;
+    width: 300px;
+    color: #fff;
+    padding: 36px 50px;
+    transition: all 0.5s;
     z-index: 20;
     opacity: 0;
-    text-align: center;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
-    visibility: hidden;
   }
-  .open #navi {
+  .open #header-navi {
+    left: 0;
     opacity: 1;
-    visibility: visible;
   }
-  #navi .menu {
-    margin: 80px 0 40px 0;
-  }
-  #navi .menu li {
+  #header-navi .navi-menu li {
     margin-bottom: 20px;
   }
-  #navi .menu a {
-    color: #000;
-    font-weight: bold;
+  #header-navi .navi-menu a {
+    color: #fff;
     font-size: 25px;
     transition: all 0.2s;
   }
-  #navi .menu a:hover {
+  #header-navi .navi-menu a:hover {
     font-size: 30px;
   }
+  #mask {
+    display: none;
+    transition: all 0.5s;
+  }
+  .open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+
   /* ヘッダーここまで */
 
   .wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 200px 0 100px;
+    max-width: 100%;
   }
   .kari {
     height: 270px;
     width: 300px;
-    transition: all 0.2s;
+    transition: all 0.4s;
   }
   .kari:hover {
     height: 285px;
@@ -150,32 +139,29 @@ main {
   }
   .section-items {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 50px;
     margin: 0 auto;
   }
   .more {
-    background-color: #FFFF00;
-    width: 150px;
-    border-radius: 20px;
-    color: #000;
-    text-align: center;
-    font-size: 30px;
-    padding: 5px;
-    margin-top: 30px;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
-    transition: all 0.2s;
+    text-align: end;
   }
-  .more:hover {
-    font-size: 35px;
+  button {
+    font-size: 20px;
+    border: 1px solid #000;
+    padding: 20px 30px;
+    border-radius: 5px;
+    transition: all 0.4s;
   }
-  #web, #banner {
-    height: 550px;
-    position: relative;
-    margin-bottom: 100px;
+  .more button:hover {
+    font-size: 25px;
+  }
+  .section-items {
+    margin-bottom: 40px;
+  }
+  section {
+    max-width: 1032px;
+    margin: 0 auto 80px;
   }
 
 /* 各コンテンツ */
@@ -188,8 +174,7 @@ main {
 .fadein {
     opacity: 0;
     transform: translate(0,80px);
-    transition: all 1s;
-    box-shadow: 0 0 8px 4px #ccc
+    transition: all 3s;
 }
 .fadein.scrollin {
     opacity: 1;
@@ -197,10 +182,9 @@ main {
 }
 /* メインビジュアル */
 .mainvisual {
-  margin-top: 100px;
   width: 100%;
-  /* height: 100vh; */
   object-fit: cover;
+  margin-bottom: 200px;
 }
 .mainvisual img {
   width: 100%;
@@ -208,8 +192,28 @@ main {
 }
 #footer {
   height: 60px;
-  background-color: #FFFF00;
+  background-color: #dddddd;
   color: #000;
   text-align: center;
   padding-top: 25px;
+  margin-top: 200px;
+}
+.sp_mainvisual {
+  display: none;
+}
+.sp_section-items {
+  display: none;
+}
+.responsiv {
+  width: 500px;
+  margin: 0 auto;
+}
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc { display: block !important; }
+.sp { display: none !important; }
+ 
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+@media only screen and (max-width: 750px) {
+    .pc { display: none !important; }
+    .sp { display: block !important; }
 }

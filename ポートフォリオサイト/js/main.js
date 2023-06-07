@@ -1,14 +1,14 @@
 $(function() {
     // ハンバーガーメニュー
     $('.hamburger').on('click', function() {
-        if($('#header').hasClass('open')) {
-            $('#header').removeClass('open');
+        if($('#header,html').hasClass('open')) {
+            $('#header,html').removeClass('open');
         } else {
-            $('#header').addClass('open');
+            $('#header,html').addClass('open');
         }
     });
-    $('#navi').on('click', function() {
-        $('#header').removeClass('open');
+    $('#mask').on('click', function() {
+        $('#header,html').removeClass('open');
     });
     // コンテンツフェードイン
       $(window).scroll(function (){
@@ -36,6 +36,7 @@ $(function() {
         swipe:false,
         pauseOnHover:false,
     })
+    // コンテンツスライダー
     $('.sp_slider').slick({
         infinity:true,
         slidesToShow:1,

@@ -1,0 +1,27 @@
+@media screen and (max-width: 480px) {
+    #header {
+        padding: 0 10px 0 20px;
+    }
+    .menu {
+        padding: 50px;
+    }
+    .wrapper {
+        padding: 0 0 50px;
+    }
+    section {
+        padding: 50px 50px 0; 
+    }
+    .section-items {
+        display: none;
+    }
+    .more {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .more-button {
+        padding: 10px 100px;
+    }
+    #footer {
+        margin-top: 100px;
+    }
+}
